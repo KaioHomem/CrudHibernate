@@ -1,0 +1,24 @@
+# Maven
+target/
+*.class
+
+# IntelliJ / NetBeans / Eclipse
+.idea/
+*.iml
+nbproject/private/
+build/
+dist/
+.settings/
+.classpath
+.project
+
+# VS Code (mantém só as configs do projeto)
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Logs e SO
+*.log
+.DS_Store
+Thumbs.db
