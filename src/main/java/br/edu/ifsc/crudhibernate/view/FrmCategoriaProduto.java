@@ -1,4 +1,4 @@
-package br.edu.ifsc.crudhibernate.view;
+ package br.edu.ifsc.crudhibernate.view;
 
 import br.edu.ifsc.crudhibernate.dao.CategoriaDAO;
 import br.edu.ifsc.crudhibernate.dao.ProdutoDAO;
