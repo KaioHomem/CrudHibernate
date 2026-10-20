@@ -1,3 +1,5 @@
+<img src=".github/cover.png" width="100%" alt="CrudHibernate: cadastro de categorias e produtos (1:N) em Java Swing, Hibernate/JPA e MySQL. Diagrama das tabelas categorias e produtos.">
+
 # Cadastro em Duas Tabelas — Swing + Hibernate (MySQL)
 
 **Autores:** Kaio Felipe Homem e Jefferson Machado
