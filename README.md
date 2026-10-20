@@ -1,16 +1,24 @@
-<img src=".github/cover.png" width="100%" alt="CrudHibernate: cadastro de categorias e produtos (1:N) em Java Swing, Hibernate/JPA e MySQL. Diagrama das tabelas categorias e produtos.">
+<div align="center">
 
-# Cadastro em Duas Tabelas — Swing + Hibernate (MySQL)
+**English** · [Português (Brasil)](README.pt-BR.md)
 
-**Autores:** Kaio Felipe Homem e Jefferson Machado
-**Disciplina:** Desenvolvimento de Sistemas Orientados a Objetos — CC3 — 2026/1
+</div>
+
+<img src=".github/cover.png" width="100%" alt="CrudHibernate: categories and products (one-to-many) in Java Swing, Hibernate/JPA and MySQL. Diagram of the categorias and produtos tables.">
+
+# Two-Table CRUD — Swing + Hibernate (MySQL)
+
+**Authors:** Kaio Felipe Homem and Jefferson Machado
+**Course:** Object-Oriented Systems Development — CC3 — 2026/1 (IFSC)
 **Professor:** Edinilson da Silva Vida
 
-Aplicação desktop em Java que cadastra **Categorias** e **Produtos** relacionados (1:N).
-Ao selecionar uma categoria, a tabela de produtos mostra apenas os produtos vinculados a ela.
-Também há um `JComboBox` para escolher a categoria ao salvar/alterar um produto.
+A Java desktop application that manages **Categories** and their related **Products** (one-to-many).
+Selecting a category filters the products table to the items linked to it.
+A `JComboBox` lets you pick the category when saving or editing a product.
 
-## Estrutura
+<sub>Class names, UI labels and the database schema are in Portuguese (`Categoria`, `Produto`).</sub>
+
+## Structure
 
 ```
 CrudHibernate/
@@ -26,24 +34,24 @@ CrudHibernate/
     └── resources/META-INF/persistence.xml
 ```
 
-## Como executar
+## Running it
 
-1. Tenha o **MySQL** rodando. Ajuste usuário/senha em `src/main/resources/META-INF/persistence.xml`
-   (padrão: usuário `root`, senha `root`). O banco `crudhibernate` é criado automaticamente.
-2. Pela linha de comando, dentro da pasta `CrudHibernate/`:
+1. Have **MySQL** running. Set the user and password in `src/main/resources/META-INF/persistence.xml`
+   (default: user `root`, password `root`). The `crudhibernate` database is created automatically.
+2. From the command line, inside the `CrudHibernate/` folder:
    ```
    mvn clean compile
    mvn exec:java
    ```
-3. Ou abra como projeto Maven no **NetBeans** e rode a classe `Main`.
+3. Or open it as a Maven project in **NetBeans** and run the `Main` class.
 
-> O Hibernate está com `hbm2ddl.auto=update`, então cria as tabelas sozinho.
-> Se preferir criar o banco manualmente, rode o `script_banco.sql` e troque para `none`.
+> Hibernate runs with `hbm2ddl.auto=update`, so it creates the tables by itself.
+> If you prefer to create the database by hand, run `script_banco.sql` and switch it to `none`.
 
-## Funcionalidades
+## Features
 
-- CRUD completo de Categorias e Produtos (salvar, alterar, excluir, listar).
-- Relacionamento `@ManyToOne` (Produto → Categoria) via Hibernate/JPA.
-- Filtro de produtos por categoria (tabela e combobox).
-- Validação: não permite salvar produto sem categoria.
-- Métodos de limpeza separados para cada formulário.
+- Full CRUD for Categories and Products (save, edit, delete, list).
+- `@ManyToOne` relationship (Product → Category) through Hibernate/JPA.
+- Products filtered by category (table and combo box).
+- Validation: a product cannot be saved without a category.
+- Separate clear methods for each form.
